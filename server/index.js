@@ -17,10 +17,7 @@ app.get('/', async (req, res) =>{
 
 });
 
-app.get('/:coin', async (req, res) => {
-    //res.send(await getCoinPrice(req.params));
-    
-});
+
 
 app.listen(process.env.PORT || 8080, () =>{
     console.log("Listening on port: " + process.env.PORT);
@@ -35,4 +32,8 @@ async function getCoinPrice(coin){
     return data;
     
 };
+
+async function getCoinLastRefresh(coin){
+    
+}
 
