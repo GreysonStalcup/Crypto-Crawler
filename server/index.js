@@ -11,7 +11,7 @@ const CoinGeckoClient = new CoinGecko();
 
 
 app.get('/', async (req, res) =>{
-    res.send(await getCoin());
+    
     
 
 });
@@ -24,9 +24,9 @@ app.listen(process.env.PORT || 8080, () =>{
     console.log("Listening on port: " + process.env.PORT);
 });
 async function getCoin(coin){
-    let coinName = coin;
+    console.log(coin);
     let data = await CoinGeckoClient.simple.price({
-        ids:`"${coinName}"`,
+        ids:"bitcoin",
         vs_currencies: ['usd'],
     });
     
