@@ -14,12 +14,13 @@ const CoinGeckoClient = new CoinGecko();
 app.get('/', async (req, res) =>{
     
     const coin = req.query.coin;
-    const data = await getCoinPrice(coin);
+    const dataStuff = await getCoinPrice(coin);
     //let priceOfCoin = data.coin.usd;
     // console.log(priceOfCoin);
-    res.send(data);
+    res.send(dataStuff);
     let coinName = coin.toString();
-    console.log(data.data[coinName])
+    console.log(dataStuff.data);
+    
 
     
     
@@ -38,7 +39,7 @@ async function getCoinPrice(coin){
         vs_currencies: ['usd'],
     });
     let coinName = coin.toString();
-    
+    console.log(coinName)
     
     return data;
     
