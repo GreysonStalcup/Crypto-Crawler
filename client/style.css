@@ -7,6 +7,29 @@
 	font-family: sans-serif;
 }
 
+h1 {
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+h2 {
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+h3 {
+	font-size: 15px;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+p {
+	font-size: 10px;
+	color: rgb(255, 255, 255)
+}
+
 .head {
 	background-color: black;
 	text-align: center;
@@ -84,8 +107,8 @@ a:hover, a:active {
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 table {
@@ -102,16 +125,11 @@ th, td {
 	background-color: black;
   }
 
-.push {
-  height: 50px;
-}
-
 footer {
 	position: relative;
 	width: 100%;
 	bottom: -100px;
 	background-color: black;
-	
 }
 
 /*
