@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 	background-color: #252e30;
-	text-align: center;
 	font-family: sans-serif;
 }
 
@@ -11,12 +10,14 @@ h1 {
 	font-size: 30px;
 	color: black;
 	text-shadow: 0 0 3px green, 0 0 5px #72DBF2;
+	text-align: center;
 }
 
 h2 {
 	font-size: 30px;
 	color: #72DBF2;
 	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+	text-align: center;
 }
 
 h3 {
@@ -26,7 +27,7 @@ h3 {
 }
 
 p {
-	font-size: 10px;
+	font-size: 12px;
 	color: #72DBF2;
 }
 
@@ -112,22 +113,31 @@ a:hover, a:active {
 
 table {
 	width: 20%;
-	text-align: right;
+	text-align: center;
 	color: #72DBF2;
-	margin-left: 5%;
+	margin-left: 1%;
 	margin-right: 60%;
+	margin-bottom: 20px;
 	border-collapse: collapse;
-	border:.5px solid white;
+	/*border:.5px solid white; < uncomment to view table boundry*/
 }
 
 th {
 	text-decoration: underline;
+	
 }
 
 th, td {
 	background-color: black;
-	min-width: 150px;
+	min-width: 125px;
 	height: 30px;
+}
+
+.info {
+	background-color: black;
+	text-align: left;
+	margin-top: 5px;
+	margin-left: 1%;
 }
 
 footer {
@@ -136,46 +146,3 @@ footer {
 	bottom: -100px;
 	background-color: black;
 }
-
-/*
-figcaption{
-  text-align:left;
-}
-
-img {
-	width: 400px;
-	height: 300px;
-  position:relative;
-  right:28px;
-}
-
-aside {
-	left: 10px;
-	border: 1px solid black;
-	padding: 15px;
-	max-width: 80%;
-	position: relative;
-	border-color: #010e80;
-	border-width: 5px;
-	font-size: 18px;
-}
-
-video {
-	display: block;
-	width: 420px;
-	height: 250px;
-  padding:15px;
-}
-
-audio {
-	padding: 15px;
-	width: 98%;
-  box-sizing: border-box;
-}
-
-embed {
-	width: 400px;
-	height: 458px;
-  padding:15px;
-}
-*/

@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Crypto-Crawler</title>
-        <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="style.css"></link>
     </head>
 
@@ -51,21 +50,37 @@
         <table>
             <thead>
                 <script type="text/javascript"> 
-                    
+
                     console.log(getPrices());
                     function getPrices(){
                         fetch('127.0.0.1:8080/../../server/?coin=bitcoin')
                     }
+
                 </script>
+
                 <th>Coin</th>
                 <th>Current value</th>
+                <th>12HR Change</th> <!-- in percent -->
+                <th>24HR Change</th> <!-- in percent -->
+                <th>7 Day Change</th> <!-- in percent -->
+
             </thead>
             <tbody>
+
                 <td>Coin Name</td>
                 <td>Current value</td>
+                <td>12HR Change</td> <!-- in percent -->
+                <td>24HR Change</td> <!-- in percent -->
+                <td>7 Day Change</td> <!-- in percent -->
+
             </tbody>
+
         </table>
-    
+
+            <h3 class="info">coin burn rate</h3>
+            <h3 class="info">coin buys per day</h3>
+            <h3 class="info">coin sells per day</h3>
+
     </section>
 
     <footer class="footer"style="margin-top: 20px;">
