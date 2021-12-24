@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 30px;
 	color: #72DBF2;
 	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
@@ -85,7 +85,7 @@ a:hover, a:active {
 	margin-right: 10px;
 	color: white;
 	text-align: left;
-	border: .5px solid white;
+	border: .5px solid #60566d;
 	border-radius: 3px;
 }
 
@@ -111,16 +111,23 @@ a:hover, a:active {
 }
 
 table {
-	width: 80%;
+	width: 20%;
 	text-align: right;
 	color: #72DBF2;
-	margin-left: 10%;
-	margin-right: 50%;
+	margin-left: 5%;
+	margin-right: 60%;
 	border-collapse: collapse;
+	border:.5px solid white;
+}
+
+th {
+	text-decoration: underline;
 }
 
 th, td {
 	background-color: black;
+	min-width: 150px;
+	height: 30px;
 }
 
 footer {
