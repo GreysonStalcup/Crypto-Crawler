@@ -9,30 +9,34 @@
 
 h1 {
 	font-size: 30px;
-	color: rgb(255, 255, 255);
-	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+	color: black;
+	text-shadow: 0 0 3px green, 0 0 5px #72DBF2;
 }
 
 h2 {
 	font-size: 20px;
-	color: rgb(255, 255, 255);
+	color: #72DBF2;
 	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
 
 h3 {
 	font-size: 15px;
-	color: rgb(255, 255, 255);
+	color: #72DBF2;
 	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
 
 p {
 	font-size: 10px;
-	color: rgb(255, 255, 255)
+	color: #72DBF2;
 }
 
 .head {
 	background-color: black;
 	text-align: center;
+}
+
+header {
+	border-bottom: solid .5px #fd8f3b;
 }
 
 navButton {
@@ -48,11 +52,12 @@ navButton {
 
 a:link, a:visited {
 	background-color: #1b1b1b;
-	color: white;
+	color: #72DBF2;
 	padding: 14px 25px;
 	text-align: left;
 	text-decoration: none;
 	display: inline-block;
+	font-size: 20px;
 }
   
 a:hover, a:active {
@@ -64,66 +69,59 @@ a:hover, a:active {
 	float: right;
 }
 
+.button {
+	background-color: #1b1b1b;
+  	border: none;
+  	color: #72DBF2;
+  	margin-right: 0px;
+  	text-align: center;
+  	display: inline-block;
+  	font-size: 20px;
+	padding: 14px 10px;
+}
+
 .bar {
 	margin-top: 14px;
 	margin-right: 10px;
 	color: white;
 	text-align: left;
-	border-color: white;
+	border: .5px solid white;
+	border-radius: 3px;
 }
 
 .bar:hover {
 	background-color: rgb(129, 129, 129);
 }
 
-.button {
-	background-color: #1b1b1b;
-  	border: none;
-  	color: white;
-  	margin-right: 0px;
-  	text-align: center;
-  	display: inline-block;
-  	font-size: 16px;
-	padding: 14px 10px;
-}
-
 .button:hover {
 	background-color: black;
 }
 
-.button:focus {
-	background-color: white;
-}
-
 .coin {
-	width: 80%;
+	width: 90%;
 	background-color: black;
 	text-align: center;
 	float: center;
-	color: white;
 	margin-left: auto;
 	margin-right: auto;
-	border-color: #353535;
-	border-width: 2px;
-	border-style: solid;
+	border: .75px solid #60566d;
 	border-radius: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 table {
 	width: 80%;
-	text-align: center;
-	float: center;
-	color: rgb(161, 161, 161);
-	margin-left: auto;
-	margin-right: auto;
+	text-align: right;
+	color: #72DBF2;
+	margin-left: 10%;
+	margin-right: 50%;
 	border-collapse: collapse;
 }
 
 th, td {
 	background-color: black;
-  }
+}
 
 footer {
 	position: relative;
