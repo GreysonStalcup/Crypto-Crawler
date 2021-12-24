@@ -23,7 +23,7 @@ h2 {
 h3 {
 	font-size: 15px;
 	color: #72DBF2;
-	text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+	/*text-shadow: 0 0 3px #000000, 0 0 5px #000000;*/
 }
 
 p {
@@ -100,12 +100,13 @@ a:hover, a:active {
 
 .coin {
 	width: 90%;
-	background-color: black;
+	background-color: #1b1b1b;
 	text-align: center;
 	float: center;
 	margin-left: auto;
 	margin-right: auto;
-	border: .75px solid #60566d;
+	/*border: .75px solid #60566d; */
+	box-shadow: 0 0px 0px 0 green, 0 0px 10px 0 #60566d;
 	border-radius: 10px;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -128,13 +129,13 @@ th {
 }
 
 th, td {
-	background-color: black;
+	background-color: #1b1b1b;
 	min-width: 125px;
 	height: 30px;
 }
 
 .info {
-	background-color: black;
+	background-color: #1b1b1b;
 	text-align: left;
 	margin-top: 5px;
 	margin-left: 1%;
