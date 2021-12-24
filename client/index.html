@@ -6,8 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Crypto-Crawler</title>
         <link rel="stylesheet" href="style.css"></link>
+        
     </head>
-
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <header>
         <div class="head">
             <img src="Crypto-Crawler Logo.png" alt="Crypto-Crawler Logo" style="width: 475px; height: 100px;">
@@ -23,13 +27,13 @@
 
                 <label class="button" for="search">Search:</label>
 
-                <input class="bar" list="search" id="crypto-look-up" name="crypto-look-up">
+                <input class="bar" list="search"  id="crypto-look-up" name="crypto-look-up">
 
                 <datalist id="search">
                     <option value="Saitama-inu">
                     <option value="Mandox">
-                    <option value="Shinja">
-                    <option value="Etherium">
+                    <option value="SHIBNOBI">
+                    <option value="ethereum">
                 </datalist>
             </search>
 
@@ -45,18 +49,11 @@
         <h1>WELCOME TO CRYPTO-CRAWLER</h1>
 
     </main>
-
+   
     <section class="coin"  style="margin-top: 20px;">
-        <table>
+        <table name="coinInfo">
             <thead>
-                <script type="text/javascript"> 
-
-                    console.log(getPrices());
-                    function getPrices(){
-                        fetch('127.0.0.1:8080/../../server/?coin=bitcoin')
-                    }
-
-                </script>
+                
 
                 <th>Coin</th>
                 <th>Current value</th>
@@ -67,8 +64,8 @@
             </thead>
             <tbody>
 
-                <td>Coin Name</td>
-                <td>Current value</td>
+                <td id="coinName">Coin Name</td>
+                <td id="coinUSD">Current value</td>
                 <td>12HR Change</td> <!-- in percent -->
                 <td>24HR Change</td> <!-- in percent -->
                 <td>7 Day Change</td> <!-- in percent -->
@@ -86,5 +83,43 @@
     <footer class="footer"style="margin-top: 20px;">
         <h2>Footer</h2>
     </footer>
-    
+    <script type="text/javascript"> 
+        $( document ).ready(getPrices("bitcoin"))
+       
+        function getPrices(coin){
+            // let res = fetch('http://localhost:8080/?coin=bitcoin')
+            // .then((response) => response.json())
+            $(function(){
+                $.ajax({
+                    url: `http://localhost:8080/?coin=${coin}`, //the URL to your node.js server that has data
+                    
+                }).done(function(data){
+                    var formatter = new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+
+                    });
+
+                    data.usd = formatter.format(data.usd);
+                    //"data" will be JSON. Do what you want with it. 
+                    $( "#coinName" ).html(data.coin);
+                    $( "#coinUSD" ).html(data.usd);
+                    });
+                });
+               
+            }
+            $("#crypto-look-up").on('input', function () {
+                var val = this.value;
+                if($('#search option').filter(function(){
+                    return this.value     
+                }).length) {
+                    //send ajax request
+                    getPrices(this.value);
+                }
+            });
+        
+        
+        
+
+    </script>
 </html>
