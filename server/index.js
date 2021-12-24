@@ -17,9 +17,9 @@ app.get('/', async (req, res) =>{
     const dataStuff = await getCoinPrice(coin);
     //let priceOfCoin = data.coin.usd;
     // console.log(priceOfCoin);
-    res.send(dataStuff);
-    let coinName = coin.toString();
-    console.log(dataStuff.data);
+    res.send(dataStuff)
+    
+    // dataStuff.data[coin].usd
     
 
     
@@ -38,10 +38,15 @@ async function getCoinPrice(coin){
         ids: coin,
         vs_currencies: ['usd'],
     });
-    let coinName = coin.toString();
-    console.log(coinName)
-    
-    return data;
+    //let coinName = coin.toString();
+    //console.log(coinName)
+    console.log(data.data[coin].usd)
+    const info = {
+        coin: coin,
+        usd: data.data[coin].usd
+    };
+    return info;
+    console.log(info) 
     
 };
 

@@ -45,9 +45,16 @@
 
     </main>
 
-    <section class="coin" style="margin-top: 20px;">
+    <section class="coin"  style="margin-top: 20px;">
         <table>
             <thead>
+                <script type="text/javascript"> 
+                    
+                    console.log(getPrices());
+                    function getPrices(){
+                        fetch('127.0.0.1:8080/../../server/?coin=bitcoin')
+                    }
+                </script>
                 <th>Coin</th>
                 <th>Current value</th>
             </thead>
